@@ -1,12 +1,9 @@
 import requests
 
 
-def send_image(draw_image):
-    mac = "00000272647F3E11"   # destination mac address
+def send_image(image_path, mac):
     dither = 0   # set dither to 1 is you're sending photos etc
-    apip = "192.168.178.115"   # ip address of your access point
-
-    mac, dither, apip, image_path = draw_image()
+    apip = "192.168.178.202"   # ip address of your access point
 
     # Prepare the HTTP POST request
     url = "http://" + apip + "/imgupload"
@@ -21,3 +18,7 @@ def send_image(draw_image):
         print("Image uploaded successfully!")
     else:
         print("Failed to upload the image.")
+
+
+if __name__ == "__main__":
+    send_image("output.jpg", "00000272647F3E11")
