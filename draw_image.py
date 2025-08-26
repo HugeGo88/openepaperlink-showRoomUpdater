@@ -1,8 +1,7 @@
-import requests
 from PIL import Image, ImageDraw, ImageFont
 
 
-def draw_image():
+def draw_image(price, article_name):
 
     # Create a new paletted image with indexed colors
     image = Image.new('P', (296, 152))
@@ -21,8 +20,8 @@ def draw_image():
     draw = ImageDraw.Draw(image)
 
     # Define the text lines
-    line1 = '991,99 EUR'
-    line2 = 'SUPER DEAL'
+    line1 = price
+    line2 = article_name
 
     # Define the fonts and sizes
     # Change the font file and size as per your preference
@@ -62,4 +61,4 @@ def draw_image():
 
 
 if __name__ == "__main__":
-    draw_image()
+    draw_image('9.99 €', 'Sample Article')
