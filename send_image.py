@@ -1,4 +1,6 @@
 import requests
+import logging
+logger = logging.getLogger(__name__)
 
 
 def send_image(image_path, mac):
@@ -15,9 +17,9 @@ def send_image(image_path, mac):
 
     # Check the response status
     if response.status_code == 200:
-        print("Image uploaded successfully!")
+        logger.info("Image uploaded successfully!")
     else:
-        print("Failed to upload the image.")
+        logger.error("Failed to upload the image.")
 
 
 if __name__ == "__main__":

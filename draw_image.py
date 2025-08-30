@@ -1,4 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
+import logging
+logger = logging.getLogger(__name__)
 
 
 def draw_image(price, article_name):

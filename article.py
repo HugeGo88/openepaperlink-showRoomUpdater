@@ -1,3 +1,7 @@
+import logging
+logger = logging.getLogger(__name__)
+
+
 class Article:
     def __init__(self, article_name: str, price: str, article_id: str, mac: str = ""):
         self.article_name = article_name

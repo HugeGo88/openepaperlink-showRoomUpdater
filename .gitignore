@@ -3,3 +3,4 @@ output.jpg
 archiv/Draw_Image.py
 __pycache__/*.*
 task.md
+app.log
